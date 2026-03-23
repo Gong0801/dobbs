@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dobbs Community</title>
+    <meta
+      name="description"
+      content="一个参考 linux.do 信息架构与社区气质打造的现代化技术社区首页。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#hero">
+          <span class="brand-mark">D</span>
+          <div>
+            <strong>Dobbs Community</strong>
+            <span>Where possibilities begin.</span>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="#topics">话题</a>
+          <a href="#categories">分类</a>
+          <a href="#highlights">亮点</a>
+          <a href="#join">加入社区</a>
+        </nav>
+        <button class="ghost-button">登录</button>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">灵感来自 linux.do 的社区型首页</p>
+            <h1>为开发者、创作者与终身学习者打造的新一代理想型社区。</h1>
+            <p class="hero-text">
+              参考论坛站点的内容分发结构与强社区氛围，我们构建了一个兼具资讯、问答、福利与深度讨论的中文技术社区首页。
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#topics">浏览热门话题</a>
+              <a class="secondary-button" href="#join">申请内测资格</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>128K+</strong><span>注册成员</span></li>
+              <li><strong>3.2K</strong><span>今日活跃</span></li>
+              <li><strong>780+</strong><span>精选主题</span></li>
+            </ul>
+          </div>
+          <aside class="hero-panel">
+            <div class="panel-card accent">
+              <span class="panel-label">Community Pulse</span>
+              <h2>今天最热的话题正在这里发生。</h2>
+              <p>从 AI 开发、效率工具到资源共享与生活闲聊，保持高频更新与低门槛参与。</p>
+            </div>
+            <div class="mini-grid">
+              <article class="panel-card">
+                <span class="panel-label">运营公告</span>
+                <strong>社区准则升级</strong>
+                <p>强调建设性讨论、资源规范与友好互助的公共氛围。</p>
+              </article>
+              <article class="panel-card">
+                <span class="panel-label">热门标签</span>
+                <div class="tag-list">
+                  <span>AI</span>
+                  <span>OpenAI</span>
+                  <span>开发调优</span>
+                  <span>福利羊毛</span>
+                </div>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" id="highlights">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">核心亮点</p>
+              <h2>提炼自社区论坛首页的 4 个关键体验。</h2>
+            </div>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h3>内容优先的首页流</h3>
+              <p>首页直接呈现最新与最热主题，让用户第一眼就进入讨论现场。</p>
+            </article>
+            <article class="feature-card">
+              <h3>分类清晰</h3>
+              <p>通过公告、开发调优、资源荟萃、福利活动等模块组织内容，提高发现效率。</p>
+            </article>
+            <article class="feature-card">
+              <h3>活跃度可视化</h3>
+              <p>主题卡片展示回复数、浏览量和最新活跃时间，帮助用户快速判断热度。</p>
+            </article>
+            <article class="feature-card">
+              <h3>轻松但专业</h3>
+              <p>既支持硬核技术交流，也保留生活化闲聊空间，形成真实且持续的社区氛围。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="topics">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Trending Topics</p>
+              <h2>热门讨论</h2>
+            </div>
+            <button class="ghost-button small" id="shuffleTopics">换一批</button>
+          </div>
+
+          <div class="topic-table">
+            <div class="topic-table__head">
+              <span>主题</span>
+              <span>分类</span>
+              <span>回复</span>
+              <span>浏览</span>
+              <span>活跃时间</span>
+            </div>
+            <div id="topicRows"></div>
+          </div>
+        </section>
+
+        <section class="section" id="categories">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Community Hubs</p>
+              <h2>社区分类</h2>
+            </div>
+          </div>
+          <div class="categories-grid">
+            <article class="category-card">
+              <h3>运营反馈</h3>
+              <p>公告、路线图、社区治理、规则更新。</p>
+              <span>12 个置顶主题</span>
+            </article>
+            <article class="category-card">
+              <h3>开发调优</h3>
+              <p>AI、编程、效率工作流、工具实践与提问。</p>
+              <span>240+ 活跃讨论</span>
+            </article>
+            <article class="category-card">
+              <h3>资源荟萃</h3>
+              <p>软件、服务、教程与使用经验共享。</p>
+              <span>80+ 精选资源</span>
+            </article>
+            <article class="category-card">
+              <h3>福利羊毛</h3>
+              <p>抽奖、优惠信息、试用活动与限时福利。</p>
+              <span>每日更新</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section join-section" id="join">
+          <div>
+            <p class="eyebrow">Join the beta</p>
+            <h2>搭建一个真正愿意被天天打开的社区首页。</h2>
+            <p>
+              这个实现版本已经包含完整视觉框架、热门话题区、社区分类区和响应式布局，可直接作为后续论坛产品或内容社区官网的落地页基础。
+            </p>
+          </div>
+          <form class="join-form">
+            <label>
+              邮箱地址
+              <input type="email" placeholder="you@example.com" />
+            </label>
+            <label>
+              你最关注的内容
+              <select>
+                <option>AI / 开发调优</option>
+                <option>资源 / 工具</option>
+                <option>福利 / 活动</option>
+                <option>社区治理</option>
+              </select>
+            </label>
+            <button type="button" class="primary-button block">提交申请</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
